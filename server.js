@@ -55,7 +55,9 @@ app.use(express.json());
 
 app.post('/', function(request, response) {
   console.log("Got email: " + request.body.email);
-  client.query(`INSERT INTO public.mail(email) VALUES ('${request.body.email}')`, (err, res) => {
+  var query = `INSERT INTO public.mail(email) VALUES ('${request.body.email}');`
+  console.log(query);
+  client.query(query, (err, res) => {
     if (err) {
       console.log(err);
     };
