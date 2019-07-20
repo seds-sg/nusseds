@@ -44,8 +44,8 @@ app.get('/team', function(req, res) {
   res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-app.get('/signup', function(req, res) {
-  res.sendFile(path.join(__dirname + '/signup.html'));
+app.get('/events', function(req, res) {
+  res.sendFile(path.join(__dirname + '/events.html'));
 });
 
 app.use(express.urlencoded({
