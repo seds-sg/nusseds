@@ -59,7 +59,9 @@ app.post('/', function(request, response) {
   client.query(`INSERT INTO public.mail(email) VALUES ('${request.body.email}')`, (err, res) => {
     // if (err) throw err;
     client.end();
-  })
+  });
+
+  response.redirect('/thanks');
 });
 
 http.listen(port, function() {
