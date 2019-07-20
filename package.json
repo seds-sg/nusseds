@@ -1,6 +1,6 @@
 {
   "title": "SEDS NUS",
-  "name": "sedsnus",
+  "name": "nusseds",
   "version": "1.0.0",
   "scripts": {
     "start": "gulp watch"
