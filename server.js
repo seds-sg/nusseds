@@ -5,6 +5,14 @@ const express     = require('express');
 const hostname    = '127.0.0.1';
 const port        = process.env.PORT || 3000;
 
+const { Client }  = require('pg');
+
+const client      = new Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl: true,
+});
+
+client.connect();
 
 var app = express();
 var http = require('http').createServer(app);
