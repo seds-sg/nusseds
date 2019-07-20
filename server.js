@@ -54,10 +54,11 @@ app.use(express.urlencoded({
 app.use(express.json());
 
 app.post('/', function(request, response) {
-  // console.log("I got a POST req");
   console.log("Got email: " + request.body.email);
   client.query(`INSERT INTO public.mail(email) VALUES ('${request.body.email}')`, (err, res) => {
-    // if (err) throw err;
+    if (err) {
+      console.log(err);
+    };
     client.end();
   });
 
