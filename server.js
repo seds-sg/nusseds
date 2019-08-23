@@ -52,6 +52,10 @@ app.get('/presentation', function(req, res) {
   res.sendFile(path.join(__dirname + '/presentation.pdf'));
 })
 
+app.get('/poster', function(req, res) {
+  res.sendFile(path.join(__dirname + '/poster.pdf'));
+})
+
 app.use(express.urlencoded({
   extended: true
 }));
