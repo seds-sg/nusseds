@@ -308,6 +308,32 @@ a:focus, a:hover {
   color: #fff !important;
 }
 
+.leadership {
+  display: flex;
+  justify-content: space-around;
+}
+
+.leadership img {
+  width: 200px;
+  height: 200px;
+}
+
+.leadership p {
+  height: 21px;
+  color: white;
+  margin-bottom: 0rem;
+}
+
+.leadership .position {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.leadership .course {
+  font-style: italic;
+  margin-bottom: 3rem;
+}
+
 footer {
   padding: 5rem 0;
 }
