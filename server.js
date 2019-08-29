@@ -1,13 +1,13 @@
 
-const path        = require('path');
-const express     = require('express');
+const path = require('path');
+const express = require('express');
 
-const hostname    = '127.0.0.1';
-const port        = process.env.PORT || 3000;
+const hostname = '127.0.0.1';
+const port = process.env.PORT || 3000;
 
-const { Client }  = require('pg');
+const { Client } = require('pg');
 
-const client      = new Client({
+const client = new Client({
   connectionString: process.env.DATABASE_URL,
   ssl: true,
 });
@@ -24,35 +24,39 @@ app.use('/node_modules', express.static(path.join(__dirname + '/node_modules')))
 app.use('/scss', express.static(path.join(__dirname + '/scss')));
 app.use('/vendor', express.static(path.join(__dirname + '/vendor')));
 
-app.get('/', function(req, res) {
+app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-app.get('/thanks', function(req, res) {
+app.get('/thanks', function (req, res) {
   res.sendFile(path.join(__dirname + '/thanks.html'));
 });
 
-app.get('/about', function(req, res) {
+app.get('/about', function (req, res) {
   res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-app.get('/projects', function(req, res) {
+app.get('/projects', function (req, res) {
   res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-app.get('/team', function(req, res) {
+app.get('/team', function (req, res) {
   res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-app.get('/events', function(req, res) {
+app.get('/events', function (req, res) {
   res.sendFile(path.join(__dirname + '/events.html'));
 });
 
-app.get('/presentation', function(req, res) {
+app.get('/leadership', function (req, res) {
+  res.sendFile(path.join(__dirname + '/leadership.html'))
+})
+
+app.get('/presentation', function (req, res) {
   res.sendFile(path.join(__dirname + '/presentation.pdf'));
 })
 
-app.get('/poster', function(req, res) {
+app.get('/poster', function (req, res) {
   res.sendFile(path.join(__dirname + '/poster.pdf'));
 })
 
@@ -61,7 +65,7 @@ app.use(express.urlencoded({
 }));
 app.use(express.json());
 
-app.post('/', function(request, response) {
+app.post('/', function (request, response) {
   console.log("Got email: " + request.body.email);
   var query = `INSERT INTO public.mail(email) VALUES ('${request.body.email}');`
   console.log(query);
@@ -75,6 +79,6 @@ app.post('/', function(request, response) {
   response.redirect('/thanks');
 });
 
-http.listen(port, function() {
+http.listen(port, function () {
   console.log(`Listening on ${port}.`);
 })
