@@ -339,6 +339,11 @@ a:focus, a:hover {
   margin-bottom: 3rem;
 }
 
+.team-header {
+  color: white;
+  font-size: 2rem;
+}
+
 footer {
   padding: 5rem 0;
 }
