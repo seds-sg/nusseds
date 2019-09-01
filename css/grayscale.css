@@ -334,6 +334,20 @@ a:focus, a:hover {
   margin-bottom: 3rem;
 }
 
+.leadership .email-address {
+  margin-top: -2.5rem;
+  margin-bottom: 3rem;
+}
+
 footer {
   padding: 5rem 0;
+}
+
+.contact-link {
+  color: white;
+  margin-top: 2rem;
+}
+
+.contact-link .contact-link-text {
+  text-decoration: underline
 }

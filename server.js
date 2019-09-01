@@ -41,16 +41,12 @@ app.get('/projects', function (req, res) {
 });
 
 app.get('/team', function (req, res) {
-  res.sendFile(path.join(__dirname + '/index.html'));
+  res.sendFile(path.join(__dirname + '/team.html'));
 });
 
 app.get('/events', function (req, res) {
   res.sendFile(path.join(__dirname + '/events.html'));
 });
-
-app.get('/leadership', function (req, res) {
-  res.sendFile(path.join(__dirname + '/leadership.html'))
-})
 
 app.get('/presentation', function (req, res) {
   res.sendFile(path.join(__dirname + '/presentation.pdf'));
