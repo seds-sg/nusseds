@@ -353,6 +353,10 @@ footer {
   margin-top: 2rem;
 }
 
+.events-row {
+  justify-content: center
+}
+
 .contact-link .contact-link-text {
   text-decoration: underline
 }
