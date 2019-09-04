@@ -339,6 +339,22 @@ a:focus, a:hover {
   margin-bottom: 3rem;
 }
 
+.projects img {
+  height: 250px;
+  width: auto;
+}
+
+.projects p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.image-credits {
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
 .team-header {
   color: white;
   font-size: 2rem;

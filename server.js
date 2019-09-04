@@ -37,7 +37,7 @@ app.get('/about', function (req, res) {
 });
 
 app.get('/projects', function (req, res) {
-  res.sendFile(path.join(__dirname + '/index.html'));
+  res.sendFile(path.join(__dirname + '/projects.html'));
 });
 
 app.get('/team', function (req, res) {
@@ -54,6 +54,14 @@ app.get('/presentation', function (req, res) {
 
 app.get('/poster', function (req, res) {
   res.sendFile(path.join(__dirname + '/poster.pdf'));
+})
+
+app.get('/rover-challenge', function (req, res) {
+  res.sendFile(path.join(__dirname + '/rover-challenge.html'));
+})
+
+app.get('/darpa-subt', function (req, res) {
+  res.sendFile(path.join(__dirname + '/darpa-subt.html'));
 })
 
 app.use(express.urlencoded({
