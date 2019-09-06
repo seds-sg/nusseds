@@ -344,6 +344,17 @@ a:focus, a:hover {
   width: auto;
 }
 
+.project-description {
+  color: white;
+  text-align: left;
+  display: inherit;
+  margin: 0 1rem
+}
+
+.project-description a {
+  text-decoration: underline
+}
+
 .projects p {
   margin-top: 1rem;
   margin-bottom: 1rem;
