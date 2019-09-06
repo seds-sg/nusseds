@@ -344,6 +344,11 @@ a:focus, a:hover {
   width: auto;
 }
 
+.rover img {
+  height: 300px;
+  width: auto;
+}
+
 .project-description {
   color: white;
   text-align: left;
